@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ch">
+
+<head>
+    <title>960帮买车</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="utf-8" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <script type="text/javascript">
+    var mengvalue = -1;
+    //if(mengvalue<0){mengvalue=0;}
+    var phoneWidth = parseInt(window.screen.width);
+    var phoneScale = phoneWidth / 640;
+
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+        var version = parseFloat(RegExp.$1);
+        // andriod 2.3
+        if (version > 2.3) {
+            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            // andriod 2.3以上
+        } else {
+            document.write('<meta name="viewport" content="width=17000, target-densitydpi=device-dpi">');
+        }
+        // 其他系统
+    } else {
+        document.write('<meta name="viewport" content="width=17000, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+    </script>
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <style type="text/css">
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 1062px;
+    }
+    
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    .bg img{
+        position: absolute;
+    }
+    
+    .ly {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .fl {
+        position: absolute;
+    }
+    
+    .shake {
+        top: 396px;
+        left: 212px;
+    }
+    .wp2,.wp3{
+        display: none;
+    }
+    .fl.bribery{
+        top:425px;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="wrapper wp1">
+        <img src="1.jpg">
+    </section>
+    <section class="wrapper wp2">\
+        <div class="bg">
+            <img src="bg2.jpg">
+        </div>
+        <div class="ly">
+            <div class="fl bribery expandUp">
+                <img src="bribery.png">
+            </div>
+        </div>
+    </section>
+    <section class="wrapper wp3">\
+        <div class="bg">
+            <img src="bg3.jpg">
+        </div>
+    </section>
+    <script type="text/javascript">
+    function viewport() {
+        var size = {
+            width: 640,
+            height: 1062
+        };
+        var container = $('.wrapper');
+        var width = container.width();
+        var height = container.height();
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+        var vector = height - windowHeight;
+        var x = 0;
+        var y = 0;
+        var ratio = 1;
+        if (vector > 0) {
+            y = vector / 2;
+            container.css({
+                'transform': 'translate(0,' + y + ')'
+            });
+        } else {
+            ratio = windowHeight / height;
+            container.css({
+                'top': -vector / 2,
+                'transform': 'scale(' + ratio + ')'
+            });
+        }
+    }
+    function shake(){
+        var shake=$('.shake');
+        shake.addClass('ring');
+        shake.hide();
+        setTimeout(function(){
+            shake.show();
+        },50);
+    }
+    viewport();
+    function wp(page){
+        $('.wrapper').hide();
+        $('.wp'+page).show();
+        page==1&&shake();
+    }
+    </script>
+</body>
+
+</html>

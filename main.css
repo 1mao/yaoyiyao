@@ -1,0 +1,121 @@
+body,
+    html {
+        width: 640px;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 1062px;
+    }
+    
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    .bg img{
+        position: absolute;
+    }
+    
+    .ly {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .fl {
+        position: absolute;
+    }
+    
+    .shake {
+        top: 396px;
+        left: 212px;
+    }
+    .wp2,.wp3{
+        display: none;
+    }
+    .fl.bribery{
+        top:425px;
+    }
+    .btn{
+        position: absolute;
+        top: 0;
+        width: 90px;
+        height:86px;
+        top: 258px;
+        left: 271px;
+    }
+    .text{
+        position: absolute;
+        text-align: center;
+        top: 68px;
+        left: 190px;
+        font-size: 40px;
+        color: #fc2b09;
+    }
+    .pop{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 1062px;
+    }
+    .shadow{
+        width: 100%;
+        height:100%;
+        opacity: .85;
+        background-color: black;
+    }
+    .val{
+        position: absolute;
+        top:310px;
+        left:70px;
+        width: 500px;
+        height: 320px;
+        font-size: 50px;
+        background-color: white;
+        border-radius: 2%;
+    }
+    .val p{
+        text-align: center;
+        height: 230px;
+        line-height: 230px;
+        border-bottom: 1px solid #d3d3d3;
+    }
+    .val .left,.val .right{
+        text-align: center;
+        display: inline-block;
+        width: 47%;
+    }
+    .val .left{
+        border-right: 1px solid #d3d3d3;
+    }
+    .old{
+        display: none;
+        top: 863px;
+        height: 48px;
+        font-size: 48px;
+        color: yellow;
+        text-align: center;
+    }
+    .done{
+        margin: 0 auto;
+        left: 260px;
+    }
+    .mao{
+        top: 350px;
+        left:176px;
+    }

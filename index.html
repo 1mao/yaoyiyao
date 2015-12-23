@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ch">
+
+<head>
+    <title>960帮买车</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="utf-8" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <script type="text/javascript">
+    var mengvalue = -1;
+    //if(mengvalue<0){mengvalue=0;}
+    var phoneWidth = parseInt(window.screen.width);
+    var phoneScale = phoneWidth / 640;
+
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+        var version = parseFloat(RegExp.$1);
+        // andriod 2.3
+        if (version > 2.3) {
+            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            // andriod 2.3以上
+        } else {
+            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+        }
+        // 其他系统
+    } else {
+        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+    </script>
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="touch.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body onload="init();">
+    <section class="wrapper wp1">
+        <div class="bg">
+            <img src="bg1.jpg">
+            <img src="bg1-1.png">
+        </div>
+        <div class="ly">
+            <div class="fl shake">
+                <img src="shake.png">
+            </div>
+        </div>
+    </section>
+    <section class="wrapper wp2">\
+        <div class="bg">
+            <img src="bg2.jpg">
+        </div>
+        <div class="ly">
+            <div class="fl bribery expandUp">
+                <img src="bribery.png">
+                <div class="text">
+                   <p>恭喜您摇到了</p>
+                   <p><span class="money">5</span>元红包</p>
+                </div>
+                <div class="btn"></div>
+            </div>
+        </div>
+        <div class="ly old">
+            <div class="fl expandUp done">
+                <div>已领取</div class="done">
+            </div>
+        </div>
+    </section>
+    <section class="wrapper wp3">\
+        <div class="bg">
+            <img src="bg3.jpg">
+        </div>
+        <div class="ly mao ring">
+            <div class="fl">
+                <img src="mao.png">
+            </div>
+        </div>
+    </section>
+    <section class="pop">
+        <div class="shadow"></div>
+        <div class="val">
+            <p>是否是工作人员？</p>
+            <div class="left">是</div>
+            <div class="right">否</div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
